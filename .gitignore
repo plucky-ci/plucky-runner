@@ -1,0 +1,4 @@
+node_modules/
+plugins/
+npm-debug.log
+plucky.json
