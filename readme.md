@@ -78,8 +78,9 @@ const pluginsFolder = path.resolve(__dirname, 'plugins');
 
 const runner = new Runner({pluginsFolder});
 const globalConfig = {};
+const params = {};
 
-runner.run('/path/to/plucky.json', globalConfig, (err, result)=>{
+runner.run('/path/to/plucky.json', {globalConfig, params}, (err, result)=>{
   if(err){
     return console.error(err);
   }
