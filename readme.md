@@ -35,7 +35,7 @@ plucky-runner <options> /path/to/plucky.config
 Example usage to run one of the test scenaiors manually:
 
 ```shell
-node ~/plucky-runner/bin/plucky-runner.js -c test/configs/embedded.js -p plugins/ -b ~/plucky-runner/
+plucky-runner -c test/configs/embedded.js -p plugins/ -b ~/plucky-runner/
 ```
 
 Programmatic Usage
