@@ -14,7 +14,7 @@ Usage
 ---
 
 ```shell
-plucky-runner <options> /path/to/plucky.config
+plucky-runner <options>
 ```
 
 ###Options
@@ -27,6 +27,7 @@ plucky-runner <options> /path/to/plucky.config
   * [baseDir]/plucky.json
   * [baseDir]/plucky.yaml
   * [baseDir]/plucky.config
+ * --param [param], -P [param] - Set a parameter, defined as [key]:[value]
 
 **NOTE:** pluginsfolder is expanded from baseDir unless you specify a full path.
 
@@ -35,7 +36,25 @@ plucky-runner <options> /path/to/plucky.config
 Example usage to run one of the test scenaiors manually:
 
 ```shell
-plucky-runner -c test/configs/embedded.js -p plugins/ -b ~/plucky-runner/
+plucky-runner -c configs/multi.js -p plugins/ -b ~/plucky-runner/test/
+```
+
+Would output:
+
+```
+{ status: 'Foo Bar' }
+```
+
+Example usage to run one of the test scenaiors manually with parameters:
+
+```shell
+plucky-runner -c configs/multi.js -p plugins/ -b ~/plucky-runner/test/ -P "status: Command Line Param"
+```
+
+Would output:
+
+```
+{ status: 'Command Line Param Foo Bar' }
 ```
 
 Programmatic Usage

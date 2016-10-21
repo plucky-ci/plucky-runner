@@ -21,7 +21,7 @@
   "homepage": "https://github.com/plucky-ci/plucky-runner#readme",
   "dependencies": {
     "plucky-loader": "0.0.3",
-    "plucky-pipeliner": "0.0.2",
+    "plucky-pipeliner": "0.0.4",
     "plucky-plugin-manager": "0.0.1"
   },
   "devDependencies": {
