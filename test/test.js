@@ -33,4 +33,13 @@ describe('Runner', ()=>{
       done();
     });
   });
+
+  it('can run embedded tasks from a pipeline', (done)=>{
+    const r = new Runner({pluginsFolder, baseDir: __dirname});
+    r.run('configs/embedded.js', (code, result)=>{
+      expect(code).to.equal(0);
+      expect(result).to.be.an.object().and.to.equal({success: true});
+      done();
+    });
+  });
 });
