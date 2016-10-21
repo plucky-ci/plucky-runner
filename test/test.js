@@ -18,9 +18,18 @@ describe('Runner', ()=>{
   const pluginsFolder = path.join(__dirname, 'plugins');
   it('can run a basic pipeline', (done)=>{
     const r = new Runner({pluginsFolder, baseDir: __dirname});
-    r.run('plucky.js', (code, result)=>{
+    r.run('configs/woot.js', (code, result)=>{
       expect(code).to.equal(0);
       expect(result).to.be.an.object().and.to.equal({status: 'Woot'});
+      done();
+    });
+  });
+
+  it('can run tasks from a single plugin within a pipeline', (done)=>{
+    const r = new Runner({pluginsFolder, baseDir: __dirname});
+    r.run('configs/multi.js', (code, result)=>{
+      expect(code).to.equal(0);
+      expect(result).to.be.an.object().and.to.equal({status: 'Foo Bar'});
       done();
     });
   });

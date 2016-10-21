@@ -41,8 +41,9 @@ const path = require('path');
 const pluginsFolder = path.resolve(__dirname, 'plugins');
 
 const runner = new Runner({pluginsFolder});
+const globalConfig = {};
 
-runner.run('/path/to/plucky.json', (err, result)=>{
+runner.run('/path/to/plucky.json', globalConfig, (err, result)=>{
   if(err){
     return console.error(err);
   }
