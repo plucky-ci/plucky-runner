@@ -74,9 +74,10 @@ const {
 } = require('plucky-runner');
 const path = require('path');
 
-const pluginsFolder = path.resolve(__dirname, 'plugins');
+const baseDir = path.resolve(__dirname);
+const pluginsFolder = path.resolve(baseDir, 'plugins');
 
-const runner = new Runner({pluginsFolder});
+const runner = new Runner({pluginsFolder, baseDir});
 const globalConfig = {};
 const params = {};
 
