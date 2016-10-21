@@ -19,7 +19,14 @@ plucky-runner <options> /path/to/plucky.config
 
 ###Options
 
- * --pluginsfolder <folder>, -p <folder> - Path where plugins should be stored
+ * --basedir [folder], -b [folder] - Base directory to execute from, defaults to process.cwd()
+ * --pluginsfolder [folder], -p [folder] - Path where plugins should be stored, defaults to [baseDir]/plugins
+ * --configfile [folder], -c [folder] - Configuration file to use, default searches for one of
+  * [baseDir]/.plucky
+  * [baseDir]/plucky.js
+  * [baseDir]/plucky.json
+  * [baseDir]/plucky.yaml
+  * [baseDir]/plucky.config
 
 Programmatic Usage
 ---

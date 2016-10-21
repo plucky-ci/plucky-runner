@@ -3,6 +3,9 @@
   "version": "0.0.1",
   "description": "A standalone runner for plucky",
   "main": "index.js",
+  "bin": {
+    "plucky-runner": "./bin/plucky-runner.js"
+  },
   "scripts": {
     "test": "lab"
   },
