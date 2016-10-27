@@ -1,6 +1,6 @@
 {
   "name": "plucky-runner",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "A standalone runner for plucky",
   "main": "index.js",
   "bin": {
