@@ -1,0 +1,7 @@
+{
+  "name": "foo",
+  "version": "0.0.1",
+  "description": "Test of multiple tasks in one plugin",
+  "main": "index.js",
+  "license": "ISC"
+}
